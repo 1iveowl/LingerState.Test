@@ -41,9 +41,7 @@ namespace LingerState.Test
             var wakeup = Encoding.UTF8.GetBytes("\r");
 
             var command = Encoding.UTF8.GetBytes("\r?P\r");
-            
-            await Task.Delay(TimeSpan.FromMilliseconds(200));
-            
+                       
             if (stream?.CanWrite ?? false)
             {
                 await stream.WriteAsync(wakeup);
